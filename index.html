@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ninja IoT Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🜲 Ninja IoT Dashboard</h1>
+    <div class="status">
+      <span id="statusDot"></span>
+      <span id="statusText">Connecting...</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Sensor Data Card -->
+    <div class="card" id="sensorCard">
+      <h2>Environment Data</h2>
+      <div class="data-item">
+        <span>🌡️ Temperature:</span>
+        <span id="tempValue">-- °C</span>
+      </div>
+      <div class="data-item">
+        <span>💧 Humidity:</span>
+        <span id="humValue">-- %</span>
+      </div>
+    </div>
+
+    <!-- LED Control -->
+    <div class="card interactive" id="ledCard">
+      <h2>LED Control</h2>
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="ledToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <p id="ledStatus">Status: OFF</p>
+    </div>
+
+    <!-- Charts -->
+    <div class="card chart-card">
+      <h2>Live Sensor Graphs</h2>
+      <canvas id="tempChart"></canvas>
+      <canvas id="humChart"></canvas>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Ninja IoT | Designed by <b>Mohammad Uthman</b>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
